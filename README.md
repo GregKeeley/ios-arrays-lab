@@ -56,10 +56,37 @@ Print out how many non-whitespace characters are in `myString`:
 
 `let myString = "This is good practice with Strings!"`
 
+Answer
+```swift
+let myString = "This is practice with Strings!"
+print(myString.count)
+
+let myStringNoWhitespaces = myString.replacingOccurrences(of: " ", with: "")
+print(myStringNoWhitespaces.count)
+```
 Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
 
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
 
+Answer
+```swift
+let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall."]
+
+for (index, myFavoriteQuotes) in myFavoriteQuotes.enumerated() {
+    print("White spaces in index position \(index) is \(myFavoriteQuotes.count)")
+}
+// I forgot it said "iterate" and did it manually, below is that code."
+
+let quotesWithNoWhiteSpaces1 = myFavoriteQuotes[0].replacingOccurrences(of: " ", with: "")
+let quotesWithNoWhiteSpaces2 = myFavoriteQuotes[1].replacingOccurrences(of: " ", with: "")
+let quotesWithNoWhiteSpaces3 = myFavoriteQuotes[2].replacingOccurrences(of: " ", with: "")
+
+print("""
+White spaces in the 1st quote is: \(quotesWithNoWhiteSpaces1.count).
+White spaces in the 2nd quote is: \(quotesWithNoWhiteSpaces2.count).
+White spaces in the 3rd quote is: \(quotesWithNoWhiteSpaces3.count).
+""")
+```
 
 ## Question 5
 
