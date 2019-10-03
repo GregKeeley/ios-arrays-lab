@@ -40,13 +40,16 @@ Iterate through the array below. For each state, print out the name of the state
 
 Answer
 ```swift
-let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+var moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+var outsideContinentalUS = [moreStates.remove(at: 0), moreStates.remove(at: 2)]
 
 for (index, moreStates) in moreStates.enumerated() {
     print("\(moreStates) \(index + 1): is in the United States")
 }
-
-// I would like to print this without the index number too. I left the \(index + 1) for now.
+for (index, outsideContinentalUS) in outsideContinentalUS.enumerated() {
+    print("\(outsideContinentalUS) \(index + 1): is outside the continental United States")
+}
 ```
 
 
@@ -96,7 +99,13 @@ Iterate through `garden` and place any 🌷 that you find into the `basket`. Rep
 var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
 var basket = [String]()
 ```
+Answer (not quite)
+```var garden = ["dirt", "🌷", "dirt", "🌷", "dirt", "dirt", "dirt", "🌷", "dirt", "🌷",]
+var basket = [String]()
 
+var dirtBasket = garden.replacingOccurrences(of: "🌷", with: "dirt")
+print(garden)
+```
 ## Question 6
 
 The below array represents an unfinished batting lineup for a baseball team. **You, the coach,** need to make some last minute changes:
