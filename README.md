@@ -10,19 +10,44 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+Answer
+```swift
+let colorArray1 = ["Orange", "Red", "Yellow", "Turquoise", "Lavender"]
+
+print("\(colorArray1[0]), \(colorArray1[2]), and \(colorArray1[4]) are some of my favorite colors!")
+```
 
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
+Answer
+```swift
+var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 
+westernStates.remove(at: westernStates.count - 1)
+westernStates.remove(at: westernStates.count - 1)
+
+print(westernStates)
+```
 
 ## Question 3
 
 Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not **in the continental United States.**
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
+
+Answer
+```swift
+let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+for (index, moreStates) in moreStates.enumerated() {
+    print("\(moreStates) \(index + 1): is in the United States")
+}
+
+// I would like to print this without the index number too. I left the \(index + 1) for now.
+```
 
 
 ## Question 4
